@@ -57,7 +57,7 @@ NEXT_PUBLIC_DATABASE_ID=<your_notion_database_id>
 5. **Run the development server**
 
 ```sh
-bun run dev
+bun dev
 ```
 
 Open http://localhost:3000 with your browser to see the result.
