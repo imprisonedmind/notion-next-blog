@@ -1,0 +1,38 @@
+[
+  {
+    "id": 950,
+    "title": "The Tailwind Saga: Battling Class-ical Naming Conventions",
+    "description": "Join our intrepid hero as they navigate the treacherous waters of utility-first CSS, where class names are as long as a Tolkien novel, and the term 'semantic' is but a distant memory.",
+    "imgUrl": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80",
+    "imgAlt": "A developer tangled in CSS class names",
+    "likes": 108,
+    "readTime": 240
+  },
+  {
+    "id": 951,
+    "title": "Next.js: The Framework That Keeps on Giving (Developers Existential Crises)",
+    "description": "Explore the wonders of Next.js, where every new release brings joy, confusion, and the occasional bout of imposter syndrome. Will you master server-side rendering, or will it master you?",
+    "imgUrl": "https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2569&q=80",
+    "imgAlt": "A developer staring at code with a puzzled expression",
+    "likes": 72,
+    "readTime": 180
+  },
+  {
+    "id": 952,
+    "title": "Tailwind's Responsive Utilities: A Crash Course in Abbreviation Mastery",
+    "description": "Thought 'sm', 'md', and 'lg' were just random letter combinations? Think again! Join us as we dive into the world of responsive design with Tailwind, where brevity is king, and your muscle memory will be put to the test.",
+    "imgUrl": "https://images.unsplash.com/photo-1581093588840-76cffed9a299?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80",
+    "imgAlt": "A developer squinting at a tiny screen",
+    "likes": 96,
+    "readTime": 210
+  },
+  {
+    "id": 953,
+    "title": "Next.js Dynamic Imports: The Suspenseful Art of Code-Splitting",
+    "description": "Brace yourselves for the thrilling world of dynamic imports in Next.js, where every line of code is a cliffhanger, and bundle sizes are the stuff of nightmares. Will your users experience lightning-fast load times, or will they be stuck in loading limbo? The suspense is killing us!",
+    "imgUrl": "https://images.unsplash.com/photo-1605153926271-c6e3d3d629ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80",
+    "imgAlt": "A developer watching a loading spinner",
+    "likes": 84,
+    "readTime": 180
+  }
+]
