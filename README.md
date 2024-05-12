@@ -7,7 +7,12 @@ This project is a dynamic blog built with Next.js, leveraging Notion as both the
 - **Notion as CMS**: Use Notion for creating, organizing, and managing blog posts.
 - **Dynamic Content Rendering**: Blog posts are rendered dynamically on the website using Next.js.
 - **SEO Friendly**: Optimized for search engines, ensuring broad visibility of your content.
-- **Responsive Design**: Ensures a smooth reading experience on any device.
+- **Responsive Design**: Built on top of [shadcn](https://github.com/shadcn-ui/ui), 
+  Ensures a smooth reading experience on 
+  any 
+  device.
+
+
 
 ## Getting Started
 
