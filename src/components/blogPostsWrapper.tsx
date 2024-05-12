@@ -6,6 +6,8 @@ interface BlogPostsWrapperProps {
 
 export const BlogPostsWrapper: FC<BlogPostsWrapperProps> = ({ children }) => {
   return (
-    <section className={"grid grid-cols-1 gap-4 py-4"}>{children}</section>
+    <section className={"grid grid-cols-1 gap-4 px-notionX py-4"}>
+      {children}
+    </section>
   );
 };

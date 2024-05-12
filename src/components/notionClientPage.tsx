@@ -19,6 +19,7 @@ export const NotionPage: FC<NotionPageProps> = (props) => {
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: dark)").matches
       }
+      className={"!dark:text-zinc-400"}
       fullPage={false}
     />
   );
