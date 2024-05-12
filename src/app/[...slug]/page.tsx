@@ -1,6 +1,7 @@
 import { NotionAPI } from "notion-client";
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { NotionPage } from "@/components/notionClientPage";
+import IsDarkModeClient from "@/components/isDarkModeClient";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const id = params.slug[1];
