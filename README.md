@@ -1,5 +1,3 @@
----
-
 # Notion-Next.js Blog
 
 This project is a dynamic blog built with Next.js, leveraging Notion as both the writing environment and database for blog posts. It aims to simplify content management and publication flow, allowing writers and developers to collaborate efficiently within a single, unified platform.
@@ -27,13 +25,13 @@ Before cloning the repo, ensure you have the following tools installed:
 1. **Clone the repository**
 
 ```sh
-git clone https://yourprojectrepository.git
+git clone https://github.com/imprisonedmind/notion-next-blog.git
 ```
 
 2. **Navigate to the project directory**
 
 ```sh
-cd notion-nextjs-blog
+cd notion-next-blog
 ```
 
 3. **Install dependencies**
