@@ -6,7 +6,7 @@ const config = {
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx,js}",
   ],
   prefix: "",
   theme: {
@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      padding: {
+        notionX: "calc(min(16px,8vw))",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

@@ -9,7 +9,9 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { convertSecondsToTime } from "@/lib/utils";
+import { encodeUrl } from "@/lib/utils";
+import Link from "next/link";
+import { ReadTime } from "@/components/readTime";
 
 interface BlogCardProps {
   title: string;
@@ -17,6 +19,9 @@ interface BlogCardProps {
   buttonTitle?: string;
   imgUrl: string;
   imgAlt: string;
+  readTime: number;
+  pageID: string;
+  createdTime: string;
 }
 
 export const BlogCard: FC<BlogCardProps> = ({
@@ -25,12 +30,17 @@ export const BlogCard: FC<BlogCardProps> = ({
   buttonTitle,
   imgUrl,
   imgAlt,
+  readTime,
+  pageID,
+  createdTime,
 }) => {
   return (
     <Card className={"col-span-1"}>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className={"line-clamp-3 w-full"}>
+          {description}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <Image
@@ -42,9 +52,11 @@ export const BlogCard: FC<BlogCardProps> = ({
         />
       </CardContent>
       <CardFooter>
-        <div className={"flex w-full justify-end"}>
-          <p>convertSecondsToTime(readTime)</p>
-          <Button>{buttonTitle || "Read More"}</Button>
+        <div className={"flex w-full items-center justify-between"}>
+          <ReadTime readTime={readTime} createdTime={createdTime} />
+          <Link prefetch={true} href={`/${encodeUrl(title)}/${pageID}`}>
+            <Button>{buttonTitle || "Read More"}</Button>
+          </Link>
         </div>
       </CardFooter>
     </Card>
