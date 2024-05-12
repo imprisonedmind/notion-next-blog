@@ -2,6 +2,7 @@ import { Client } from "@notionhq/client";
 import React, { cache } from "react";
 import { BlogCard } from "@/components/blogCard";
 import { BlogPostsWrapper } from "@/components/blogPostsWrapper";
+import { dynamicBlurDataUrl } from "@/lib/utils";
 
 const notion = new Client({
   auth: process.env.AUTH_TOKEN,
@@ -21,7 +22,7 @@ export default async function Home() {
 
   return (
     <BlogPostsWrapper>
-      {data.map((blog, index) => {
+      {data.map(async (blog, index) => {
         // @ts-ignore
         const properties = blog.properties;
         const imgUrl = properties.coverImg.files[0]?.file.url;
@@ -31,6 +32,7 @@ export default async function Home() {
         const pageID = properties.pageID.rich_text[0]?.text.content;
         const imgAlt = properties.imgAlt.rich_text[0]?.text.content;
         const created = properties.createdTime.created_time;
+        const blurData = await dynamicBlurDataUrl(imgUrl);
 
         return (
           <BlogCard
@@ -42,6 +44,7 @@ export default async function Home() {
             readTime={readTime}
             pageID={pageID}
             createdTime={created}
+            dynamicBlurDataUrl={blurData}
           />
         );
       })}

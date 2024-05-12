@@ -22,6 +22,7 @@ interface BlogCardProps {
   readTime: number;
   pageID: string;
   createdTime: string;
+  dynamicBlurDataUrl: string;
 }
 
 export const BlogCard: FC<BlogCardProps> = ({
@@ -33,6 +34,7 @@ export const BlogCard: FC<BlogCardProps> = ({
   readTime,
   pageID,
   createdTime,
+  dynamicBlurDataUrl,
 }) => {
   return (
     <Card className={"col-span-1"}>
@@ -48,6 +50,8 @@ export const BlogCard: FC<BlogCardProps> = ({
           alt={imgAlt}
           width={300}
           height={300}
+          placeholder={"blur"}
+          blurDataURL={dynamicBlurDataUrl}
           priority={true}
           className={"h-64 w-full object-cover"}
         />
