@@ -42,7 +42,7 @@ cd notion-next-blog
 3. **Install dependencies**
 
 ```sh
-npm install
+bun install
 ```
 
 4. **Environment Configuration**
