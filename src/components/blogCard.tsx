@@ -48,6 +48,7 @@ export const BlogCard: FC<BlogCardProps> = ({
           alt={imgAlt}
           width={300}
           height={300}
+          priority={true}
           className={"h-64 w-full object-cover"}
         />
       </CardContent>
