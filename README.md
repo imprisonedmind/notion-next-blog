@@ -50,8 +50,8 @@ bun install
 Create a `.env.local` file at the root of your project and add your Notion integration tokens and any other configuration parameters your project might need. For example:
 
 ```sh
-NEXT_PUBLIC_AUTH_TOKEN=<your_notion_api_key>
-NEXT_PUBLIC_DATABASE_ID=<your_notion_database_id>
+AUTH_TOKEN=<your_notion_api_key>
+DATABASE_ID=<your_notion_database_id>
 ```
 
 5. **Run the development server**

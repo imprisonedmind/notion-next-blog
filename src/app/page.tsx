@@ -4,12 +4,12 @@ import { BlogCard } from "@/components/blogCard";
 import { BlogPostsWrapper } from "@/components/blogPostsWrapper";
 
 const notion = new Client({
-  auth: process.env.NEXT_PUBLIC_AUTH_TOKEN,
+  auth: process.env.AUTH_TOKEN,
 });
 
 const fetchData = cache(async () => {
   const data = await notion.databases.query({
-    database_id: process.env.NEXT_PUBLIC_DATABASE_ID!,
+    database_id: process.env.DATABASE_ID!,
   });
 
   const { results } = data;
