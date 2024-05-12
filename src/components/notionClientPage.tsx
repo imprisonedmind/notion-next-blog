@@ -13,6 +13,13 @@ export const NotionPage: FC<NotionPageProps> = (props) => {
   const { recordMap } = props;
 
   return (
-    <NotionRenderer recordMap={recordMap} darkMode={false} fullPage={false} />
+    <NotionRenderer
+      recordMap={recordMap}
+      darkMode={
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      }
+      fullPage={false}
+    />
   );
 };

@@ -9,10 +9,10 @@ interface ReadTimeProps {
 export const ReadTime: FC<ReadTimeProps> = ({ readTime, createdTime }) => {
   return (
     <div className={"flex flex-col "}>
-      <p className={"text-sm text-slate-500"}>
+      <p className={"text-sm text-zinc-500"}>
         {convertSecondsToTime(readTime)} read
       </p>
-      <p className={"text-xs text-slate-400"}>
+      <p className={"text-xs text-zinc-400"}>
         {formatRelativeTime(createdTime)}
       </p>
     </div>
