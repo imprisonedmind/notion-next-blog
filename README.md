@@ -22,8 +22,8 @@ These instructions will get your copy of the project up and running on your loca
 
 Before cloning the repo, ensure you have the following tools installed:
 
-- Node.js (version 14.x or later)
-- npm (version 6.x or later)
+- Node.js (version 20.x or later)
+- bun (version 1.x or later)
 
 ### Installation
 
@@ -57,7 +57,7 @@ NEXT_PUBLIC_DATABASE_ID=<your_notion_database_id>
 5. **Run the development server**
 
 ```sh
-npm run dev
+bun run dev
 ```
 
 Open http://localhost:3000 with your browser to see the result.
