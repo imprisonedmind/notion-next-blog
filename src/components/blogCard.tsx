@@ -23,6 +23,7 @@ interface BlogCardProps {
   pageID: string;
   createdTime: string;
   dynamicBlurDataUrl: string;
+  isPrivate: boolean;
 }
 
 export const BlogCard: FC<BlogCardProps> = ({
@@ -35,7 +36,12 @@ export const BlogCard: FC<BlogCardProps> = ({
   pageID,
   createdTime,
   dynamicBlurDataUrl,
+  isPrivate,
 }) => {
+  const link = isPrivate
+    ? `/${encodeUrl(title)}/${pageID}/isPrivate`
+    : `/${encodeUrl(title)}/${pageID}`;
+
   return (
     <Card className={"col-span-1"}>
       <CardHeader>
@@ -59,7 +65,7 @@ export const BlogCard: FC<BlogCardProps> = ({
       <CardFooter>
         <div className={"flex w-full items-center justify-between"}>
           <ReadTime readTime={readTime} createdTime={createdTime} />
-          <Link prefetch={true} href={`/${encodeUrl(title)}/${pageID}`}>
+          <Link prefetch={true} href={link}>
             <Button>{buttonTitle || "Read More"}</Button>
           </Link>
         </div>

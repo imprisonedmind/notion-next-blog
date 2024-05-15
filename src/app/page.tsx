@@ -32,6 +32,7 @@ export default async function Home() {
         const pageID = properties.pageID.rich_text[0]?.text.content;
         const imgAlt = properties.imgAlt.rich_text[0]?.text.content;
         const created = properties.createdTime.created_time;
+        const isPrivate = properties.isPrivate.checkbox;
         const blurData = await dynamicBlurDataUrl(imgUrl);
 
         return (
@@ -44,6 +45,7 @@ export default async function Home() {
             readTime={readTime}
             pageID={pageID}
             createdTime={created}
+            isPrivate={isPrivate}
             dynamicBlurDataUrl={blurData}
           />
         );
