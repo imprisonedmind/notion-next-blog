@@ -91,7 +91,3 @@ For other platforms, refer to the respective documentation on deploying Next.js 
 ## License
 
 This project is licensed under the [MIT License](LICENSE). See the LICENSE file for details.
-
----
-
-This template provides a foundational structure for your README. Remember, a well-documented project is more accessible and easier to contribute to. Adjust the content as necessary to match your specific project's needs.
