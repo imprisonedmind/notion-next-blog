@@ -73,3 +73,12 @@ export async function dynamicBlurDataUrl(url: string) {
 
   return `data:image/svg+xml;base64,${toBase64(blurSvg)}`;
 }
+
+export const createLink = (
+  isPrivate: boolean,
+  title: string,
+  pageID: string,
+) =>
+  isPrivate
+    ? `/${encodeUrl(title)}/${pageID}/isPrivate`
+    : `/${encodeUrl(title)}/${pageID}`;

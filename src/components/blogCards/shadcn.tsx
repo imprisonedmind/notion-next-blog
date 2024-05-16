@@ -9,24 +9,12 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { encodeUrl } from "@/lib/utils";
+import { createLink } from "@/lib/utils";
 import Link from "next/link";
 import { ReadTime } from "@/components/readTime";
+import { BlogData } from "@/lib/types";
 
-interface BlogCardProps {
-  title: string;
-  description: string;
-  buttonTitle?: string;
-  imgUrl: string;
-  imgAlt: string;
-  readTime: number;
-  pageID: string;
-  createdTime: string;
-  dynamicBlurDataUrl: string;
-  isPrivate: boolean;
-}
-
-export const BlogCard: FC<BlogCardProps> = ({
+export const Shadcn: FC<BlogData> = ({
   title,
   description,
   buttonTitle,
@@ -38,10 +26,6 @@ export const BlogCard: FC<BlogCardProps> = ({
   dynamicBlurDataUrl,
   isPrivate,
 }) => {
-  const link = isPrivate
-    ? `/${encodeUrl(title)}/${pageID}/isPrivate`
-    : `/${encodeUrl(title)}/${pageID}`;
-
   return (
     <Card className={"col-span-1"}>
       <CardHeader>
@@ -50,6 +34,7 @@ export const BlogCard: FC<BlogCardProps> = ({
           {description}
         </CardDescription>
       </CardHeader>
+
       <CardContent>
         <Image
           src={imgUrl}
@@ -62,10 +47,11 @@ export const BlogCard: FC<BlogCardProps> = ({
           className={"h-64 w-full object-cover"}
         />
       </CardContent>
+
       <CardFooter>
         <div className={"flex w-full items-center justify-between"}>
           <ReadTime readTime={readTime} createdTime={createdTime} />
-          <Link prefetch={true} href={link}>
+          <Link prefetch={true} href={createLink(isPrivate, title, pageID)}>
             <Button>{buttonTitle || "Read More"}</Button>
           </Link>
         </div>

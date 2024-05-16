@@ -17,12 +17,8 @@ export default function Layout({ children, params }) {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              <BreadcrumbLink href="/">Blogs</BreadcrumbLink>
             </BreadcrumbItem>
-            {/*<BreadcrumbSeparator />*/}
-            {/*<BreadcrumbItem>*/}
-            {/*  <BreadcrumbLink href="/components">Components</BreadcrumbLink>*/}
-            {/*</BreadcrumbItem>*/}
             <BreadcrumbSeparator />
             <BreadcrumbItem>
               <BreadcrumbPage>{page}</BreadcrumbPage>

@@ -1,8 +1,9 @@
 import { Client } from "@notionhq/client";
 import React, { cache } from "react";
-import { BlogCard } from "@/components/blogCard";
 import { BlogPostsWrapper } from "@/components/blogPostsWrapper";
 import { dynamicBlurDataUrl } from "@/lib/utils";
+import { Shadcn } from "@/components/blogCards/shadcn";
+import { NewYork } from "@/components/blogCards/newYork";
 
 const notion = new Client({
   auth: process.env.AUTH_TOKEN,
@@ -35,8 +36,8 @@ export default async function Home() {
         const isPrivate = properties.isPrivate.checkbox;
         const blurData = await dynamicBlurDataUrl(imgUrl);
 
-        return (
-          <BlogCard
+        const shadcn = (
+          <Shadcn
             key={index}
             title={title}
             description={description}
@@ -49,6 +50,28 @@ export default async function Home() {
             dynamicBlurDataUrl={blurData}
           />
         );
+
+        switch (process.env.STYLE) {
+          case "shadcn":
+            return shadcn;
+          case "newyork":
+            return (
+              <NewYork
+                key={index}
+                title={title}
+                description={description}
+                imgUrl={imgUrl}
+                imgAlt={imgAlt}
+                readTime={readTime}
+                pageID={pageID}
+                createdTime={created}
+                isPrivate={isPrivate}
+                dynamicBlurDataUrl={blurData}
+              />
+            );
+          default:
+            return shadcn;
+        }
       })}
     </BlogPostsWrapper>
   );
