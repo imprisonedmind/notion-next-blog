@@ -4,22 +4,10 @@ import { BlogPostsWrapper } from "@/components/blogPostsWrapper";
 import { dynamicBlurDataUrl } from "@/lib/utils";
 import { Shadcn } from "@/components/blogCards/shadcn";
 import { NewYork } from "@/components/blogCards/newYork";
-
-const notion = new Client({
-  auth: process.env.AUTH_TOKEN,
-});
-
-const fetchData = cache(async () => {
-  const data = await notion.databases.query({
-    database_id: process.env.DATABASE_ID!,
-  });
-
-  const { results } = data;
-  return results;
-});
+import { fetchBlogs } from "@/app/actions";
 
 export default async function Home() {
-  const data = await fetchData();
+  const data = await fetchBlogs();
 
   return (
     <BlogPostsWrapper>

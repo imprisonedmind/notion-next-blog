@@ -23,7 +23,7 @@ export const LargeTitle: FC<LargeTitleProps> = ({ style, title }) => {
           <h1 className={"text-3xl text-zinc-600 dark:text-zinc-100"}>
             {title}
           </h1>
-          <p className={"text-sm text-zinc-500"}>{date}</p>
+          <p className={"text-sm tracking-wide text-zinc-500"}>{date}</p>
         </div>
       )}
       {style === "shadcn" && (
