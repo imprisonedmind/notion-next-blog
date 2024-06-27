@@ -3,6 +3,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import IsDarkModeClient from "@/components/isDarkModeClient";
+// core styles shared by all of react-notion-x (required)
+import "react-notion-x/src/styles.css";
+
+// used for code syntax highlighting (optional)
+import "prismjs/themes/prism-tomorrow.css";
+
+// used for rendering equations (optional)
+import "katex/dist/katex.min.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
