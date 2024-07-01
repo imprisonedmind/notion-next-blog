@@ -24,7 +24,7 @@ export const YoutubeVideo: FC<YoutubeVideoProps> = ({ src }) => {
       // @ts-ignore
       playerRef.current = new YT.Player("youtube-player", {
         events: {
-          onReady: (event) => {
+          onReady: (event: any) => {
             event.target.mute();
             event.target.playVideo();
           },
