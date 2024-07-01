@@ -80,5 +80,5 @@ export const createLink = (
   pageID: string,
 ) =>
   isPrivate
-    ? `/${encodeUrl(title)}/${pageID}/isPrivate`
-    : `/${encodeUrl(title)}/${pageID}`;
+    ? `${encodeUrl(title)}/${pageID}/isPrivate`
+    : `${encodeUrl(title)}/${pageID}`;

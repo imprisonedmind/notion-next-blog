@@ -11,7 +11,7 @@ export const BlogPostsWrapper: FC<BlogPostsWrapperProps> = ({ children }) => {
   return (
     <section
       className={`
-        px-notionX
+        px-notionX 
         ${style == "shadcn" && " grid grid-cols-1 gap-4 py-4"}
         ${style == "newyork" && " grid grid-cols-1 gap-16 py-8"}
     `}

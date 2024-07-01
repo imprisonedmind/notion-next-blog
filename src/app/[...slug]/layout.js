@@ -6,7 +6,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "../../components/ui/breadcrumb";
-import { Fragment } from "react";
 
 export default function Layout({ children, params }) {
   const page = params.slug[0];
