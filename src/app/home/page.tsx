@@ -36,7 +36,7 @@ export default function Page() {
                   font.className + " stroke text-center text-6xl font-bold"
                 }
               >
-                bloggin for the peeps, <br /> via notion.
+                bloggin for da homies, <br /> via notion.
               </p>
               <p className={"text-center text-3xl font-thin tracking-wider"}>
                 write, edit and share your notion blogs with your <br />{" "}
