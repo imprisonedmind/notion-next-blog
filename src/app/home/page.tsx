@@ -1,4 +1,5 @@
 import { Gluten } from "next/font/google";
+import { YoutubeVideo } from "@/components/video/youtubeVideo";
 
 const font = Gluten({
   subsets: ["latin"],
@@ -70,24 +71,9 @@ export default function Page() {
           </div>
         </div>
 
-        <div
-          className={`
-            mt-16 flex min-h-[483px] rotate-1 rounded-3xl border border-yellow-950/10 
-            bg-gradient-to-t from-yellow-950/10 to-yellow-300/10 p-4
-        `}
-        >
-          <video
-            width="320"
-            height="240"
-            autoPlay={true}
-            controls={false}
-            muted={true}
-            loop={true}
-            className={`h-auto w-full rounded-xl`}
-          >
-            <source src={"/video/demo.mp4"} type="video/mp4" />
-          </video>
-        </div>
+        <YoutubeVideo
+          src={"https://www.youtube.com/embed/fFp-jGz9PYw?si=OXy--Z0lnnvTZS3K"}
+        />
       </div>
     </div>
   );

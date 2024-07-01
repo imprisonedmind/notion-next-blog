@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.ytp-chrome-top, .ytp-chrome-bottom, .ytp-watermark {
+    display: none !important;
+}
