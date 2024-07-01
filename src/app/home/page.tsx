@@ -74,13 +74,13 @@ export const metadata: Metadata = {
     siteName: "bloggin",
     images: [
       {
-        url: "/large.jpg",
+        url: "https://notion-nextjs-bloggin.vercel.app/large.jpg",
         width: 1024,
         height: 683,
         alt: "bloggin - Create, Build & Share Notion blogs with Next.js.",
       },
       {
-        url: "/small.jpg",
+        url: "https://notion-nextjs-bloggin.vercel.app/small.jpg",
         width: 1200,
         height: 600,
         alt: "bloggin - Notion Blogs with nextjs.",
@@ -91,6 +91,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@site",
     creator: "@lukey_stephens",
-    images: "/small.jpg",
+    images: "https://notion-nextjs-bloggin.vercel.app/small.jpg",
   },
 };
