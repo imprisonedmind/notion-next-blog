@@ -80,36 +80,3 @@ export default function Input() {
     </Fragment>
   );
 }
-
-export const metadata: Metadata = {
-  title: "bloggin for da homies",
-  metadataBase: new URL("https://notion-nextjs-bloggin.vercel.app/home"),
-  description: `Create, Build & Share Notion blogs with Next.js.`,
-  openGraph: {
-    type: "website",
-    url: "https://notion-nextjs-bloggin.vercel.app/home",
-    title: "bloggin for da homies",
-    description: "Create, Build & Share Notion blogs with Next.js.",
-    siteName: "bloggin",
-    images: [
-      {
-        url: "/large.jpg",
-        width: 1024,
-        height: 683,
-        alt: "bloggin - Create, Build & Share Notion blogs with Next.js.",
-      },
-      {
-        url: "/small.jpg",
-        width: 1200,
-        height: 600,
-        alt: "bloggin - Notion Blogs with nextjs.",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@site",
-    creator: "@lukey_stephens",
-    images: "/small.jpg",
-  },
-};
