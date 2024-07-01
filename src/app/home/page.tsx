@@ -91,6 +91,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@site",
     creator: "@lukey_stephens",
-    images: "https://notion-nextjs-bloggin.vercel.app/small.jpg",
+    images: "https://notion-nextjs-bloggin.vercel.app/large.jpg",
   },
 };
