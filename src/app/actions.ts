@@ -46,6 +46,6 @@ export const postContact = async ({ email }: { email: string }) => {
       return { status: 200, res: data };
     }
   } catch (error) {
-    console.log(error.detail);
+    return { status: 500, res: { detail: "An unexpected error occurred" } };
   }
 };

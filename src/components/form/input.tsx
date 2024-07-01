@@ -12,7 +12,7 @@ export default function Input() {
 
   const [isExploding, setIsExploding] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     setLoading(true);
     e.preventDefault();
     if (email) {
