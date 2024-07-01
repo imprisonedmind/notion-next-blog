@@ -1,5 +1,6 @@
 import { Gluten } from "next/font/google";
 import { YoutubeVideo } from "@/components/video/youtubeVideo";
+import Input from "@/components/form/input";
 
 const font = Gluten({
   subsets: ["latin"],
@@ -46,29 +47,7 @@ export default function Page() {
               </p>
             </div>
           </div>
-
-          <div className={"relative mx-auto w-full max-w-[300px]"}>
-            <input
-              placeholder={"get a mail on launch day!"}
-              className={`
-                w-full rounded-md border border-yellow-950/20 bg-yellow-100 p-2 
-                shadow-inner outline-none ring-yellow-950/10 ring-offset-4
-                ring-offset-yellow-200/10 transition-colors placeholder:text-yellow-950/20
-                focus:ring-1
-              `}
-            />
-
-            <button
-              className={`
-                ease-in-linear absolute right-2 top-1/2 -translate-y-[50%] rounded-sm 
-                border border-yellow-950/5 bg-yellow-500/10 p-1 px-2 text-sm 
-                duration-300 hover:rounded-lg hover:bg-yellow-950 
-                hover:text-yellow-50 hover:drop-shadow-md
-              `}
-            >
-              submit
-            </button>
-          </div>
+          <Input />
         </div>
 
         <YoutubeVideo

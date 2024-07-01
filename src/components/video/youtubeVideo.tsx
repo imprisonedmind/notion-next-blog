@@ -49,27 +49,28 @@ export const YoutubeVideo: FC<YoutubeVideoProps> = ({ src }) => {
   return (
     <div
       className={`
-        relative mx-auto mt-16 flex min-h-[483px] max-w-[742px] rotate-1 cursor-pointer 
-        overflow-hidden rounded-3xl border border-yellow-950/10 bg-gradient-to-t
-        from-yellow-950/10 to-yellow-300/10 p-4
+        relative mx-auto mt-16 flex rotate-1 cursor-pointer overflow-hidden rounded-3xl 
+        border border-yellow-950/10 bg-gradient-to-t from-yellow-950/10 to-yellow-300/10 
+        p-8
       `}
       onClick={handleClick}
     >
       <iframe
-        src={`${src}&autoplay=1&mute=1&loop=1&controls=0&playlist=fFp-jGz9PYw&enablejsapi=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3`}
+        src={`${src}&autoplay=1&mute=1&loop=1&controls=1&playlist=fFp-jGz9PYw&enablejsapi=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3`}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
-        className="absolute inset-0 h-full w-full"
+        className="h-full min-h-[451px] w-full max-w-[742px] rounded-xl"
         id="youtube-player"
       ></iframe>
       {isMuted && (
         <div
+          onClick={handleClick}
           className={`
-            absolute bottom-4 left-4 mx-auto flex 
-            justify-center rounded-xl border border-yellow-950/10 bg-gradient-to-t 
-            from-yellow-300 to-yellow-200 p-2 px-4 drop-shadow-md
+            absolute bottom-4 left-4 mx-auto flex justify-center rounded-xl border 
+            border-yellow-950/10 bg-gradient-to-t from-yellow-300 to-yellow-200 p-2 px-4 
+            drop-shadow-md
           `}
         >
           <span className="m-auto text-2xl text-yellow-950">un-mute</span>
