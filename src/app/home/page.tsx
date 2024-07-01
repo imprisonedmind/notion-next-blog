@@ -63,6 +63,9 @@ export const metadata: Metadata = {
   title: "bloggin for da homies",
   metadataBase: new URL("https://notion-nextjs-bloggin.vercel.app/home"),
   description: `Create, Build & Share Notion blogs with Next.js.`,
+  icons: {
+    icon: "/frog.ico",
+  },
   openGraph: {
     type: "website",
     url: "https://notion-nextjs-bloggin.vercel.app/home",
