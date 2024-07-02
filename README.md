@@ -2,6 +2,8 @@
 
 This project is a dynamic blog built with Next.js, leveraging Notion as both the writing environment and database for blog posts. It aims to simplify content management and publication flow, allowing writers and developers to collaborate efficiently within a single, unified platform.
 
+[![YouTube Video](https://img.youtube.com/vi/fFp-jGz9PYw/0.jpg)](https://www.youtube.com/watch?v=fFp-jGz9PYw)
+
 ## Features
 
 - **Notion as CMS**: Use Notion for creating, organizing, and managing blog posts.
